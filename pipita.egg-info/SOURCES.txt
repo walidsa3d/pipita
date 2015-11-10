@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.cfg
+setup.py
+pipita/__init__.py
+pipita/pipita.py
+pipita.egg-info/PKG-INFO
+pipita.egg-info/SOURCES.txt
+pipita.egg-info/dependency_links.txt
+pipita.egg-info/not-zip-safe
+pipita.egg-info/top_level.txt
+tests/__init__.py

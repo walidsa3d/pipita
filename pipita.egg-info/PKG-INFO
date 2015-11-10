@@ -1,0 +1,54 @@
+Metadata-Version: 1.1
+Name: pipita
+Version: 0.1.0
+Summary: An API wrapper for PyPI
+Home-page: https://github.com/walidsa3d/pipita
+Author: Walid Saad
+Author-email: walid.sa3d@gmail.com
+License: mit
+Description: pipita
+        ======
+        
+        |Build| |downloads| |license| |version|
+        
+        An API wrapper for PyPI
+        
+        Install (automatic)
+        -------------------
+        
+        ::
+        
+            $ pip install pipita
+        
+        Install (manual)
+        ----------------
+        
+        ::
+        
+            $ git clone 
+            $ cd pipita
+            $ python setup.py install
+        
+        Usage
+        -----
+        
+        ::
+        
+        Demo
+        ~~~~
+        
+        License
+        -------
+        
+        .. |Build| image:: https://travis-ci.org/walidsa3d/pipita.svg?branch=master
+        .. |downloads| image:: https://img.shields.io/pypi/dm/pipita.svg
+        .. |license| image:: https://img.shields.io/pypi/l/pipita.svg
+        .. |version| image:: https://img.shields.io/pypi/v/pipita.svg
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
