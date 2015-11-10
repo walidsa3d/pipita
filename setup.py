@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name="pipita",
-    version="0.2.0",
+    version="0.3.0",
     description="An API wrapper for PyPI",
     long_description=read_md('README.md'),
     author="Walid Saad",
