@@ -3,5 +3,4 @@
 
 import pipita
 
-for release in pipita.info('pipita').releases:
-    print release.size
+print pipita.exists('wikidicto')

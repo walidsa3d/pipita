@@ -3,6 +3,7 @@
 ![downloads](https://img.shields.io/pypi/dm/pipita.svg)
 ![license](https://img.shields.io/pypi/l/pipita.svg)
 ![version](https://img.shields.io/pypi/v/pipita.svg)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
 An API wrapper for PyPI
 

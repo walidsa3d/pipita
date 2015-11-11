@@ -19,6 +19,8 @@ def info(pkg_name):
     except requests.exceptions.RequestException as e:
         print e
         return
+    attrs = ['name', 'author', 'author_email', 'license', 'summary', 'version',
+             'keywords']
     data = response['info']
     pkg = Pkg()
     pkg.name = data['name']
@@ -40,3 +42,12 @@ def info(pkg_name):
         releases.append(release)
     pkg.releases = releases
     return pkg
+
+def exists(pkg_name):
+    pkg_url = 'https://pypi.python.org/pypi/{}/json'.format(pkg_name)
+    try:
+        r = requests.head(pkg_url)
+        r.raise_for_status()
+        return True
+    except requests.exceptions.RequestException as e:
+        return False
