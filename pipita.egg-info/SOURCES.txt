@@ -2,10 +2,13 @@ MANIFEST.in
 setup.cfg
 setup.py
 pipita/__init__.py
+pipita/cli.py
 pipita/pipita.py
 pipita.egg-info/PKG-INFO
 pipita.egg-info/SOURCES.txt
 pipita.egg-info/dependency_links.txt
 pipita.egg-info/not-zip-safe
+pipita.egg-info/requires.txt
 pipita.egg-info/top_level.txt
 tests/__init__.py
+tests/test_pkg.py

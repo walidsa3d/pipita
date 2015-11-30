@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
+__version__ = '0.4.0'
 
-__author__ = ''
-__email__ = ''
-__version__ = '0.3.0'
+from . import cli
+from . import pipita

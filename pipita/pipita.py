@@ -5,7 +5,9 @@ import humanize
 
 
 class Pkg(object):
-    pass
+
+    def __str__(self):
+        return self.name+' '+self.latest_version+' '+self.summary+' '
 
 
 class Release(object):
@@ -14,34 +16,32 @@ class Release(object):
 
 def info(pkg_name):
     pkg_url = 'https://pypi.python.org/pypi/{}/json'.format(pkg_name)
-    try:
+    if exists(pkg_name):
         response = requests.get(pkg_url).json()
-    except requests.exceptions.RequestException as e:
-        print e
-        return
-    attrs = ['name', 'author', 'author_email', 'license', 'summary', 'version',
-             'keywords']
-    data = response['info']
-    pkg = Pkg()
-    pkg.name = data['name']
-    pkg.author = data['author']
-    pkg.author_email = data['author_email']
-    pkg.license = data['license']
-    pkg.summary = data['summary']
-    pkg.latest_version = data['version']
-    pkg.keywords = data['keywords']
-    releases = []
-    versions = response['releases'].keys()
-    for item in versions:
-        r = response['releases'][item][0]
-        release = Release()
-        release.url = r['url']
-        release.downloads = r['downloads']
-        release.upload_time = r['upload_time']
-        release.size = humanize.naturalsize(r['size'])
-        releases.append(release)
-    pkg.releases = releases
+        data = response['info']
+        pkg = Pkg()
+        pkg.name = data['name']
+        pkg.author = data['author']
+        pkg.author_email = data['author_email']
+        pkg.license = data['license']
+        pkg.summary = data['summary']
+        pkg.latest_version = data['version']
+        pkg.keywords = data['keywords']
+        releases = []
+        for item in response['releases'].iterkeys():
+            if response['releases'][item]:
+                r = response['releases'][item][0]
+                release = Release()
+                release.url = r['url']
+                release.downloads = r['downloads']
+                release.upload_time = r['upload_time']
+                release.size = humanize.naturalsize(r['size'])
+                releases.append(release)
+        pkg.releases = releases
+    else:
+        return None
     return pkg
+
 
 def exists(pkg_name):
     pkg_url = 'https://pypi.python.org/pypi/{}/json'.format(pkg_name)

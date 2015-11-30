@@ -1,15 +1,15 @@
 Metadata-Version: 1.1
 Name: pipita
-Version: 0.1.0
+Version: 0.3.0
 Summary: An API wrapper for PyPI
 Home-page: https://github.com/walidsa3d/pipita
 Author: Walid Saad
 Author-email: walid.sa3d@gmail.com
-License: mit
+License: MIT
 Description: pipita
         ======
         
-        |Build| |downloads| |license| |version|
+        |Build| |downloads| |license| |version| |PEP8|
         
         An API wrapper for PyPI
         
@@ -44,6 +44,8 @@ Description: pipita
         .. |downloads| image:: https://img.shields.io/pypi/dm/pipita.svg
         .. |license| image:: https://img.shields.io/pypi/l/pipita.svg
         .. |version| image:: https://img.shields.io/pypi/v/pipita.svg
+        .. |PEP8| image:: https://img.shields.io/badge/code%20style-pep8-orange.svg
+           :target: https://www.python.org/dev/peps/pep-0008/
         
 Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta

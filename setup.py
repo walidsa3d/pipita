@@ -10,7 +10,7 @@ except ImportError:
 
 setup(
     name="pipita",
-    version="0.3.0",
+    version="0.4.0",
     description="An API wrapper for PyPI",
     long_description=read_md('README.md'),
     author="Walid Saad",
@@ -18,8 +18,9 @@ setup(
     url="https://github.com/walidsa3d/pipita",
     packages=find_packages(),
     include_package_data=True,
+    install_requires=['requests', 'humanize'],
     test_suite="tests",
-    license="mit",
+    license="MIT",
     zip_safe=False,
     classifiers=[
         # 'Development Status :: 1 - Planning',
